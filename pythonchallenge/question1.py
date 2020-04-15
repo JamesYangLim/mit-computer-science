@@ -31,6 +31,6 @@ encodeAlphabet = "cdefghijklmnopqrstuvwxyzab"
 #         "y": "a", "z": "b"}
 
 trans = str.maketrans(alphabet, encodeAlphabet)
-
+print(trans)
 print(someStr.translate(trans))
 
