@@ -28,7 +28,10 @@ def dp_make_weight(egg_weights, target_weight, memo = {}):
         last_w = egg_weights[-1]
         num_egg = int(target_weight / last_w)
         memo[last_w] = num_egg
-        num_egg += dp_make_weight(egg_weights[:len(egg_weights)-1], target_weight - (last_w * num_egg), memo)
+        num_egg += dp_make_weight(
+            egg_weights[:len(egg_weights)-1], 
+            target_weight - (last_w * num_egg), 
+            memo)
         return num_egg
 
 # EXAMPLE TESTING CODE, feel free to add more if you'd like
